@@ -6,7 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="00aff7a0-b658-4b37-8c4c-a36579087602" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/plugin.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/aesoper/intellij/entgo/action/GenerateEntBuilderAction.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/aesoper/intellij/entgo/action/GenerateEntBuilderAction.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/aesoper/intellij/entgo/action/GenerateEntModelAction.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/aesoper/intellij/entgo/action/GenerateEntModelAction.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/aesoper/intellij/entgo/action/NewEntSchemaAction.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/aesoper/intellij/entgo/action/NewEntSchemaAction.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/aesoper/intellij/entgo/utils/ExecUtils.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/aesoper/intellij/entgo/utils/ExecUtils.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,7 +138,7 @@
       <recent name="com.aesoper.intellij.entgo.utils" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.entgo-intellij [buildPlugin]">
+  <component name="RunManager" selected="Gradle.Run Plugin">
     <configuration name="entgo-intellij [buildPlugin]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -246,7 +249,18 @@
       <workItem from="1656566181543" duration="6668000" />
       <workItem from="1656679274976" duration="1705000" />
       <workItem from="1656684330078" duration="349000" />
-      <workItem from="1656690423050" duration="8000" />
+      <workItem from="1656690423050" duration="49000" />
+      <workItem from="1657119860293" duration="1274000" />
+      <workItem from="1657960519180" duration="465000" />
+      <workItem from="1658198241697" duration="10000" />
+      <workItem from="1658300635688" duration="141000" />
+      <workItem from="1658322375059" duration="1509000" />
+      <workItem from="1658402644243" duration="2677000" />
+      <workItem from="1658484409094" duration="12000" />
+      <workItem from="1658828191641" duration="3230000" />
+      <workItem from="1658834367126" duration="9000" />
+      <workItem from="1659010511387" duration="19000" />
+      <workItem from="1659270365908" duration="5623000" />
     </task>
     <servers />
   </component>
