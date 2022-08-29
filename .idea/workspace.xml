@@ -5,11 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="00aff7a0-b658-4b37-8c4c-a36579087602" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/aesoper/intellij/entgo/utils/String.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/aesoper/intellij/entgo/action/GenerateEntBuilderAction.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/aesoper/intellij/entgo/action/GenerateEntBuilderAction.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/aesoper/intellij/entgo/action/GenerateEntModelAction.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/aesoper/intellij/entgo/action/GenerateEntModelAction.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/aesoper/intellij/entgo/action/NewEntSchemaAction.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/aesoper/intellij/entgo/action/NewEntSchemaAction.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/aesoper/intellij/entgo/utils/ExecUtils.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/aesoper/intellij/entgo/utils/ExecUtils.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/messages/EntBundle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/messages/EntBundle.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,13 +121,14 @@
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
     &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/aesoper/Downloads/intellij-sdk-code-samples-main/intellij-sdk-code-samples-main/run_configuration&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/IdeaWorkspace/entgo-intellij/src/main/kotlin/com/aesoper/intellij/entgo/utils&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.fileTypes&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\IdeaWorkspace\entgo-intellij\src\main\kotlin\com\aesoper\intellij\entgo\utils" />
       <recent name="D:\IdeaWorkspace\entgo-intellij\src\main\kotlin\com\aesoper\intellij\entgo\action" />
       <recent name="D:\IdeaWorkspace\entgo-intellij\src\main\resources\icons" />
       <recent name="D:\IdeaWorkspace\entgo-intellij" />
@@ -151,6 +153,27 @@
         <option name="taskNames">
           <list>
             <option value="buildPlugin" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="entgo-intellij [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="build" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -226,6 +249,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.entgo-intellij [buildPlugin]" />
+        <item itemvalue="Gradle.entgo-intellij [build]" />
         <item itemvalue="Gradle.entgo-intellij [signPlugin]" />
         <item itemvalue="Gradle.entgo-intellij [getChangelog]" />
         <item itemvalue="Gradle.entgo-intellij [initializeChangelog]" />
@@ -260,7 +284,20 @@
       <workItem from="1658828191641" duration="3230000" />
       <workItem from="1658834367126" duration="9000" />
       <workItem from="1659010511387" duration="19000" />
-      <workItem from="1659270365908" duration="5623000" />
+      <workItem from="1659270365908" duration="5962000" />
+      <workItem from="1659586951354" duration="100000" />
+      <workItem from="1659587375265" duration="1459000" />
+      <workItem from="1659679305214" duration="294000" />
+      <workItem from="1659936345837" duration="48000" />
+      <workItem from="1660020395741" duration="2419000" />
+      <workItem from="1660026114706" duration="27000" />
+      <workItem from="1660028078857" duration="508000" />
+      <workItem from="1660072880650" duration="586000" />
+      <workItem from="1660073866297" duration="695000" />
+      <workItem from="1660074723353" duration="93000" />
+      <workItem from="1660300558269" duration="22000" />
+      <workItem from="1660317098200" duration="613000" />
+      <workItem from="1660318816753" duration="28000" />
     </task>
     <servers />
   </component>

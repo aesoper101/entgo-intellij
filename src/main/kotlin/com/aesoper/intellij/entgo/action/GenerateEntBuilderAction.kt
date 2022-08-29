@@ -19,7 +19,7 @@ class GenerateEntBuilderAction : AnAction(EntBundle.message("new.builder.action.
         GoExecutor.`in`(project, module)
             .disablePty()
             .withExePath(Constants.EntCmdName)
-            .withParameters(listOf("generate", "./schema"))
+            .withParameters(listOf("generate", "--feature",  "privacy,entql,schema/snapshot,sql/modifier", "./schema"))
             .withWorkDirectory(file.path)
             .withPresentableName(Constants.EntCmdName + " generate ./schema")
             .executeWithProgress {
