@@ -39,7 +39,7 @@ class GenerateEntModelAction : AnAction(EntBundle.message("new.asserts.action.na
         val nameField = contentPanel.textField
 
         val popup =
-            NewItemPopupUtil.createNewItemPopup(EntBundle.message("action.ent.new.name"), contentPanel, nameField)
+                NewItemPopupUtil.createNewItemPopup(EntBundle.message("action.ent.new.name"), contentPanel, nameField)
 
         contentPanel.setApplyAction { event ->
             val name = nameField.text
@@ -50,29 +50,34 @@ class GenerateEntModelAction : AnAction(EntBundle.message("new.asserts.action.na
                         popup.closeOk(event)
 
                         WriteCommandAction.runWriteCommandAction(project) {
-                            GoExecutor.`in`(project, module).disablePty().withExePath(Constants.EntCmdName)
-                                .withParameters(
-                                    listOf(
-                                        "init", "--target", "./schema",  name.toCamelCase()
+                            GoExecutor.`in`(module)
+//                                    .disablePty()
+                                    .withExePath(Constants.EntCmdName)
+                                    .withParameters(
+                                            listOf(
+                                                    "init", "--target", "./schema", name.toCamelCase()
+                                            )
                                     )
-                                ).withPresentableName(
-                                    Constants.EntCmdName + " init --target ./schema " + name.toCamelCase()
-                                ).withWorkDirectory(file.path).executeWithProgress {
-                                    when (it.status) {
-                                        GoExecutor.ExecutionResult.Status.SUCCEEDED -> {
-                                            Notification.info(project, "ent model generate success")
-                                            FileReload.reloadFromDisk(e)
-                                        }
-                                        GoExecutor.ExecutionResult.Status.FAILED -> {
-                                            it.message?.let { it1 -> Notification.error(project, it1) }
-                                        }
-                                        else -> {
-                                            it.message?.let { it1 -> Notification.info(project, it1) }
+                                    .withPresentableName(Constants.EntCmdName + " init --target ./schema " + name.toCamelCase()).withWorkDirectory(file.path)
+                                    .executeWithOutput {
+                                        when (it.status) {
+                                            GoExecutor.ExecutionResult.Status.SUCCEEDED -> {
+                                                Notification.info(project, "ent model generate success")
+                                                FileReload.reloadFromDisk(e)
+                                            }
+
+                                            GoExecutor.ExecutionResult.Status.FAILED -> {
+                                                it.message?.let { it1 -> Notification.error(project, it1) }
+                                            }
+
+                                            else -> {
+                                                it.message?.let { it1 -> Notification.info(project, it1) }
+                                            }
                                         }
                                     }
-                                }
                         }
                     }
+
                     else -> {
                         contentPanel.setError(EntBundle.message("action.ent.new.model.exists", name))
                     }

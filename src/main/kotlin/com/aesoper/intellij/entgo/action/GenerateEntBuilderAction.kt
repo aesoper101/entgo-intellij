@@ -17,12 +17,12 @@ class GenerateEntBuilderAction : AnAction(EntBundle.message("new.builder.action.
         val file = e.getData(PlatformDataKeys.VIRTUAL_FILE) ?: return
 
         GoExecutor.`in`(project, module)
-            .disablePty()
+//            .disablePty()
             .withExePath(Constants.EntCmdName)
             .withParameters(listOf("generate", "--feature",  "privacy,entql,schema/snapshot,sql/modifier", "./schema"))
             .withWorkDirectory(file.path)
             .withPresentableName(Constants.EntCmdName + " generate ./schema")
-            .executeWithProgress {
+            .executeWithOutput {
                 when (it.status) {
                     GoExecutor.ExecutionResult.Status.SUCCEEDED -> {
                         Notification.info(project, "ent generate success")
