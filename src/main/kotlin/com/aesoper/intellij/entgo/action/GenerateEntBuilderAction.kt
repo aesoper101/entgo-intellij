@@ -18,8 +18,19 @@ class GenerateEntBuilderAction : AnAction(EntBundle.message("new.builder.action.
 
         GoExecutor.`in`(project, module)
 //            .disablePty()
-            .withExePath(Constants.EntCmdName)
-            .withParameters(listOf("generate", "--feature",  "privacy,entql,schema/snapshot,sql/modifier,sql/schemaconfig,namedges,sql/lock", "./schema"))
+//            .withExePath(Constants.EntCmdName)
+//            .withParameters(
+//                listOf(
+//                    "generate",
+//                    "--feature",
+//                    "privacy,entql,schema/snapshot,sql/modifier,sql/schemaconfig,namedges,sql/lock,sql/upsert",
+//                    "--template",
+//                    "./template",
+//                    "./schema",
+//                )
+//            )
+            .withExePath("go")
+            .withParameters("generate", "-v")
             .withWorkDirectory(file.path)
             .withPresentableName(Constants.EntCmdName + " generate ./schema")
             .executeWithOutput {
@@ -28,9 +39,11 @@ class GenerateEntBuilderAction : AnAction(EntBundle.message("new.builder.action.
                         Notification.info(project, "ent generate success")
                         FileReload.reloadFromDisk(e)
                     }
+
                     GoExecutor.ExecutionResult.Status.FAILED -> {
                         it.message?.let { it1 -> Notification.error(project, it1) }
                     }
+
                     else -> {
                         it.message?.let { it1 -> Notification.info(project, it1) }
                     }

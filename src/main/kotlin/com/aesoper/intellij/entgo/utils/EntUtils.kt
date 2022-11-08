@@ -21,7 +21,7 @@ object EntUtils {
 
        val content = read(generateFile.inputStream)
 
-       return content != null && content.contains("//go:generate go run -mod=mod entgo.io/ent/cmd/ent generate ./schema")
+       return content != null && content.contains("//go:generate") && content.contains("entgo.io/ent/cmd/ent generate")
    }
 
     private fun read(inputStream: InputStream?): String? {
